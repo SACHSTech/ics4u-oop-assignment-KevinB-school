@@ -15,8 +15,8 @@ public abstract class OrderItem {
     return this.strName;
   }
 
-  public Nutritions getNutritions() {
-    return this.classNeutritions;
+  public void getNutritions() {
+    this.classNeutritions.outputAsLabel();
   }
 
   public abstract void getSummary();

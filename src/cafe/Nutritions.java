@@ -43,4 +43,12 @@ public class Nutritions {
       dblProtine = dblFat / dblSugar;
     } 
   }
+
+  public void outputAsLabel(){
+    System.out.println("per " + this.dblServingSize + " gram serving: ");
+    System.out.println("calories: " + this.dblCalories);
+    System.out.println("sugar: " + this.dblSugar);
+    System.out.println("fat: " + this.dblFat);
+    System.out.println("protine: " + this.dblProtine);
+  }
 }
