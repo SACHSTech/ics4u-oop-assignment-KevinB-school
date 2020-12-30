@@ -13,12 +13,15 @@ public class Main {
     ben.addNewItem(chocolateCake);
 
     // adding another Item
-      //Nutritions croissantNeutritions = new Nutritions(250, "pasteries");
-      //croissantNeutritions.outputAsLabel();
-    OrderItem croissant = new Dessert("croissant", new Nutritions(250, "pasteries"), "pastery", new String[] {"vanilla",});
-    croissant.getNutritions();
+    OrderItem croissant = new Dessert("croissant", new Nutritions(250, "pasteries"), "pastery", new String[] {"vanilla"});
+    //croissant.getNutritions();
     ben.addNewItem(croissant);
 
+    // adding another Item
+    OrderItem coffeeLarge = new Drinks("Gater coffee",  new Nutritions(45, "coffee"), "coffee", 'L', true);
+    ben.addNewItem(coffeeLarge);
+    
+    
     // summary
     ben.getSummary();
     ben.getSubtotalAndTotal();
