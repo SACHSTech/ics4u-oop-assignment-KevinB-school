@@ -21,6 +21,10 @@ public class Main {
     OrderItem coffeeLarge = new Drinks("Gater coffee",  new Nutritions(45, "coffee"), "coffee", 'L', true);
     ben.addNewItem(coffeeLarge);
     
+    // adding another Item
+    OrderItem hamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwich"), "sandwhich");
+    hamSandwich.cook();
+    ben.addNewItem(hamSandwich);
     
     // summary
     ben.getSummary();
