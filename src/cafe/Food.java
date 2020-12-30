@@ -6,6 +6,7 @@ public class Food extends OrderItem{
   // Instance variables
   private String strTypeOfFood;
   private double dblPrice;
+  //ADD TOPPINGS
 
   public Food(String newName, Nutritions newNeutritions, String newTypeOfFood){
     super(newName, newNeutritions);
@@ -26,7 +27,7 @@ public class Food extends OrderItem{
   }
   
   // Cooking simulation
-  public cook() {
+  public void cook() {
     if (strTypeOfFood.equals("sandwhich")) {
       System.out.println("Toasting bread...");
       System.out.println("Adding ingridents...");
@@ -47,6 +48,6 @@ public class Food extends OrderItem{
 
   // returing the price of the item
   public double getPrice() {
-    return dblPrice;
+    return this.dblPrice;
   }
 }

@@ -52,6 +52,6 @@ public class Drinks extends OrderItem{
 
   // returing the price of the item
   public double getPrice() {
-    return dblPrice;
+    return this.dblPrice;
   }
 }

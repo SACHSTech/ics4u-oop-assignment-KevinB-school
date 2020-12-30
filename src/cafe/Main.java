@@ -23,7 +23,6 @@ public class Main {
     
     // adding another Item
     OrderItem hamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwich"), "sandwhich");
-    hamSandwich.cook();
     ben.addNewItem(hamSandwich);
     
     // summary
