@@ -18,6 +18,16 @@ public class Order {
     itemsInOrder.add(newOrderItem);
   }
 
+  public void removeAddedItem(OrderItem OldOrderItem) {
+    int i;
+
+    for (i = 0; i < itemsInOrder.size(); i++) {
+      if (itemsInOrder.get(i).equals(OldOrderItem)) {
+        itemsInOrder.remove(i);
+      }
+    }
+  }
+
   public void addTotal() {
     for (int i = 0; i < itemsInOrder.size(); i++) {
       this.dblTotal += itemsInOrder.get(i).getPrice();
@@ -43,8 +53,8 @@ public class Order {
 
   public void getSubtotalAndTotal() {
     addTotal();
-    System.out.println("Subtotal: " + dblTotal);
-    System.out.println("Tax: " + dblTotal * 0.13);
+    System.out.println("Subtotal: " + Math.round((dblTotal)*100.0)/100.0);
+    System.out.println("Tax: " + Math.round((dblTotal * 0.13)*100.0)/100.0);
     System.out.println("Total: " + Math.round((dblTotal * 1.13)*100.0)/100.0);
   }
 

@@ -18,12 +18,14 @@ public class Main {
     ben.addNewItem(croissant);
 
     // adding another Item
-    OrderItem coffeeLarge = new Drinks("Gater coffee",  new Nutritions(45, "coffee"), "coffee", 'L', true);
+    OrderItem coffeeLarge = new Drinks("Gater coffee",  new Nutritions(45, "warm drinks"), "coffee", 'L', true);
     ben.addNewItem(coffeeLarge);
     
     // adding another Item
-    OrderItem hamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwich"), "sandwhich");
+    OrderItem hamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwiches"), "sandwhich", new String[] {"ketchup", "mayo"});
     ben.addNewItem(hamSandwich);
+    hamSandwich.getNutritions();
+    //ben.removeAddedItem(hamSandwich);
     
     // summary
     ben.getSummary();

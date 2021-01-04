@@ -16,7 +16,10 @@ public abstract class OrderItem {
   }
 
   public void getNutritions() {
+    System.out.println("------------------------------");
+    System.out.println(strName + " neutrition facts: ");
     this.classNeutritions.outputAsLabel();
+    System.out.println("------------------------------");
   }
 
   public abstract void getSummary();

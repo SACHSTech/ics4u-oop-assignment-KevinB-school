@@ -6,11 +6,12 @@ public class Food extends OrderItem{
   // Instance variables
   private String strTypeOfFood;
   private double dblPrice;
-  //ADD TOPPINGS
+  private String[] strSausesAndToppings;
 
-  public Food(String newName, Nutritions newNeutritions, String newTypeOfFood){
+  public Food(String newName, Nutritions newNeutritions, String newTypeOfFood, String[] newSausesAndToppings){
     super(newName, newNeutritions);
     this.strTypeOfFood = newTypeOfFood;
+    this.strSausesAndToppings = newSausesAndToppings;
 
     // Giving price based on the type of food
     if (strTypeOfFood.equals("sandwhich")) {
@@ -41,8 +42,14 @@ public class Food extends OrderItem{
 
   // Outputing summary of the item
   public void getSummary() {
-    System.out.print(super.getName() + ".");
-
+    System.out.print(super.getName() + "with: ");
+    for(int i = 0; i < strSausesAndToppings.length; i++) {
+      if (i == (strSausesAndToppings.length - 1)) {
+        System.out.print(strSausesAndToppings[i] + ".");
+      } else {
+        System.out.print(strSausesAndToppings[i] + ", ");
+      }
+    }
     System.out.println(" $" + dblPrice);
   }
 
