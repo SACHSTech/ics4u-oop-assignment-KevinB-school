@@ -10,6 +10,8 @@ public abstract class OrderItem {
     this.strName = newName;
     this.classNeutritions = newNeutritions;
   }
+  
+  // Add a prepare method
 
   public String getName() {
     return this.strName;

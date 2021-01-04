@@ -8,10 +8,11 @@ public class Main {
     Order ben = new Order(false);
 
     // adding 1 Item
+    // NOTE DESSERT TYPE INSTEAD OF ORDER ITEM
     Nutritions chocolateCakeNeutritions = new Nutritions(250, "cakes");
-    OrderItem chocolateCake = new Dessert("chocolate cake", chocolateCakeNeutritions, "cake", new String[] {"Sprinkles", "Nutella"});
+    Dessert chocolateCake = new Dessert("chocolate cake", chocolateCakeNeutritions, "cake", new String[] {"Sprinkles", "Nutella"});
     ben.addNewItem(chocolateCake);
-    //chocolateCake.BoxDessert();
+    chocolateCake.boxDessert();
 
     // adding another Item
     OrderItem croissant = new Dessert("croissant", new Nutritions(250, "pasteries"), "pastery", new String[] {"vanilla"});
