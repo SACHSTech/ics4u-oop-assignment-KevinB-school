@@ -23,6 +23,18 @@ public class Dessert extends OrderItem{
     }
   }
 
+  // Boxing dessert simulation
+  public void boxDessert() {
+    if (strTypeOfDessert.equals("ice cream")) {
+      System.out.println("Preparing cone and icecream machine...");
+      System.out.println("Putting " + strTypeOfDessert + " in the cone...");
+    } else {
+      System.out.println("Baking " + strTypeOfDessert + "...");
+      System.out.println("Boxing " + strTypeOfDessert + "...");
+    }
+    System.out.println(strTypeOfDessert + " is ready!");
+  }
+
   // Outputing summary of the item
   public void getSummary() {
     System.out.print(super.getName() + " with: ");

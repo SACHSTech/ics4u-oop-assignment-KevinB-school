@@ -11,6 +11,7 @@ public class Main {
     Nutritions chocolateCakeNeutritions = new Nutritions(250, "cakes");
     OrderItem chocolateCake = new Dessert("chocolate cake", chocolateCakeNeutritions, "cake", new String[] {"Sprinkles", "Nutella"});
     ben.addNewItem(chocolateCake);
+    //chocolateCake.BoxDessert();
 
     // adding another Item
     OrderItem croissant = new Dessert("croissant", new Nutritions(250, "pasteries"), "pastery", new String[] {"vanilla"});
@@ -24,7 +25,7 @@ public class Main {
     // adding another Item
     OrderItem hamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwiches"), "sandwhich", new String[] {"ketchup", "mayo"});
     ben.addNewItem(hamSandwich);
-    hamSandwich.getNutritions();
+    //hamSandwich.getNutritions();
     //ben.removeAddedItem(hamSandwich);
     
     // summary
