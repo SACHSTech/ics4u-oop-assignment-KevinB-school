@@ -25,6 +25,7 @@ public class Dessert extends OrderItem{
 
   // Boxing dessert simulation
   public void boxDessert() {
+    System.out.println("");
     if (strTypeOfDessert.equals("ice cream")) {
       System.out.println("Preparing cone and icecream machine...");
       System.out.println("Putting " + strTypeOfDessert + " in the cone...");

@@ -14,7 +14,7 @@ public class Food extends OrderItem{
     this.strSausesAndToppings = newSausesAndToppings;
 
     // Giving price based on the type of food
-    if (strTypeOfFood.equals("sandwhich")) {
+    if (strTypeOfFood.equals("sandwich")) {
       dblPrice = 1.52;
     } else if (strTypeOfFood.equals("doughnut")) {
       dblPrice = 0.55;
@@ -29,7 +29,8 @@ public class Food extends OrderItem{
   
   // Cooking simulation
   public void cook() {
-    if (strTypeOfFood.equals("sandwhich")) {
+    System.out.println("");
+    if (strTypeOfFood.equals("sandwich")) {
       System.out.println("Toasting bread...");
       System.out.println("Adding ingridents...");
     } else if (strTypeOfFood.equals("eggs")) {

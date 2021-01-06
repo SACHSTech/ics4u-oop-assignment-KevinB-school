@@ -36,6 +36,7 @@ public class Drinks extends OrderItem{
 
   // Drink brewing simulation
   public void brewDrink() {
+    System.out.println("");
     if (blnHotDrink) {
       System.out.println("brewing " + strTypeOfDrink + "...");
     } else if (blnHotDrink == false) {
