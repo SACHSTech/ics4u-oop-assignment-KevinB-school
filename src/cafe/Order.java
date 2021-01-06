@@ -7,13 +7,14 @@ public class Order {
   private boolean blnTakeOut;
   private double dblTotal;
   private ArrayList<OrderItem> itemsInOrder;
+  public static double dblDayEarnings;
 
   public Order(boolean newTakeOut) {
     this.blnTakeOut = newTakeOut;
     this.dblTotal = 0.0;
     this.itemsInOrder = new ArrayList<OrderItem>();
   }
-
+  
   public void addNewItem(OrderItem newOrderItem){
     itemsInOrder.add(newOrderItem);
   }
@@ -56,6 +57,8 @@ public class Order {
     System.out.println("Subtotal: " + Math.round((dblTotal)*100.0)/100.0);
     System.out.println("Tax: " + Math.round((dblTotal * 0.13)*100.0)/100.0);
     System.out.println("Total: " + Math.round((dblTotal * 1.13)*100.0)/100.0);
+    dblDayEarnings += Math.round((dblTotal * 1.13)*100.0)/100.0;
+    System.out.println("");
   }
 
 }

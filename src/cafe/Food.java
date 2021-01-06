@@ -42,7 +42,7 @@ public class Food extends OrderItem{
 
   // Outputing summary of the item
   public void getSummary() {
-    System.out.print(super.getName() + "with: ");
+    System.out.print(super.getName() + " with: ");
     for(int i = 0; i < strSausesAndToppings.length; i++) {
       if (i == (strSausesAndToppings.length - 1)) {
         System.out.print(strSausesAndToppings[i] + ".");
