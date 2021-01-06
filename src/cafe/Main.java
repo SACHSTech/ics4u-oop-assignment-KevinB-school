@@ -1,14 +1,18 @@
 package cafe;
-
 import cafe.*;
 import java.io.*;
 
+/**
+* A program that tests different sinarios and demonstrates functionality of the object 
+* oriented structures in the project.
+* @author: Kevin Basta
+*/
 public class Main {
   public static void main(String[] args) throws IOException{
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
     // Friday febuary, 1st, 2021 Cash Register
-    // loading up today's menue
+    // loading up today's menu
 
     // Foods
     OrderItem plainHamSandwich = new Food("Ham Sandwich", new Nutritions(400, "sandwiches"), "sandwich", new String[] {"none"});
@@ -25,7 +29,7 @@ public class Main {
     Drinks coffeeSmall = new Drinks("plain coffee",  new Nutritions(45, "warm drinks"), "coffee", 'M', true);
 
     // Desserts
-    Dessert chocolateCake = new Dessert("chocolate cake", new Nutritions(250, "cakes"), "cake", new String[] {"Sprinkles", "Nutella"}); // NOTE DESSERT TYPE INSTEAD OF ORDER ITEM
+    Dessert chocolateCake = new Dessert("chocolate cake", new Nutritions(250, "cakes"), "cake", new String[] {"Sprinkles", "Nutella"});
 
     Dessert croissant = new Dessert("croissant", new Nutritions(250, "pasteries"), "pastery", new String[] {"vanilla"});
 
@@ -34,14 +38,12 @@ public class Main {
     // order #1
     Order ben = new Order(false);
 
-    // adding Item 1 and boxing it
+    // adding 3 items, boxing the first, and removing the third
     chocolateCake.boxDessert();
     ben.addNewItem(chocolateCake);
 
-    // adding Item 2
     ben.addNewItem(coffeeLarge);
     
-    // adding Item 3 but then removing it
     ben.addNewItem(plainHamSandwich);
     ben.removeAddedItem(plainHamSandwich);
     
@@ -54,11 +56,10 @@ public class Main {
     // order #2
     Order Everett = new Order(true);
 
-    // adding Item 1 and getting nutritions
+    // adding 2 items and getting nutritions for the first 
     croissant.getNutritions();
     Everett.addNewItem(croissant);
 
-    // adding Item 2
     Everett.addNewItem(mayoHamSandwich);
 
     // getting Everett's order summary and total
@@ -70,10 +71,10 @@ public class Main {
     // order #3
     Order Matthew = new Order(true);
 
-    // adding Matthew's custom Sandwich and cooking it
+    // adding Matthew's custom Sandwich and cooking it, then adding 
     System.out.println("What type of custom sandwich would you like? (chicken, ham, eggs)");
     String strSandwichName = keyboard.readLine() + " sandwich";
-    System.out.println("What 2 toppings/sauses would you like on your sandwich? (ketchup, mayo, mustard, radish, pickles, tomatoes, lettus)");
+    System.out.println("What 2 toppings/sauses would you like on your sandwich? (ketchup, mayo, mustard, radish, pickles, tomatoes, lettuce)");
     String strTopping1 = keyboard.readLine();
     String strTopping2 = keyboard.readLine();
 
@@ -93,6 +94,6 @@ public class Main {
 
     // printing earnings of the day
     System.out.println("");
-    System.out.println("Day/Session total earning: " + Math.round((Order.dblDayEarnings * 1.13)*100.0)/100.0);
+    System.out.println("Day/Session total earning: " + Math.round((Order.dblDayEarnings * 1.13) * 100.0) / 100.0);
   }
 }

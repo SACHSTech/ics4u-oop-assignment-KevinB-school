@@ -1,6 +1,11 @@
 package cafe;
 import cafe.*;
 
+/**
+* A program that extends the orderitem class. This program is for defining foods, cooking them, 
+* determining their price, and outputing their summary.
+* @author: Kevin Basta
+*/
 public class Food extends OrderItem{
 
   // Instance variables
@@ -8,6 +13,14 @@ public class Food extends OrderItem{
   private double dblPrice;
   private String[] strSausesAndToppings;
 
+  /**
+  * Constructor method for the Food class
+  *
+  * @param newName  The name of the order item
+  * @param newNeutritions  The constructor for the Nutritions class
+  * @param newTypeOfFood  The spesific type of food being ordered
+  * @param newSausesAndToppings  An array containing all toppings put on the food item
+  */
   public Food(String newName, Nutritions newNeutritions, String newTypeOfFood, String[] newSausesAndToppings){
     super(newName, newNeutritions);
     this.strTypeOfFood = newTypeOfFood;
@@ -27,7 +40,9 @@ public class Food extends OrderItem{
     }
   }
   
-  // Cooking simulation
+  /**
+  * A method that simulates the cooking and preparing of the food through prints
+  */
   public void cook() {
     System.out.println("");
     if (strTypeOfFood.equals("sandwich")) {
@@ -41,7 +56,9 @@ public class Food extends OrderItem{
     }
   }
 
-  // Outputing summary of the item
+  /**
+  * A method that outputs the summary of item using prints
+  */
   public void getSummary() {
     System.out.print(super.getName() + " with: ");
     for(int i = 0; i < strSausesAndToppings.length; i++) {
@@ -54,7 +71,11 @@ public class Food extends OrderItem{
     System.out.println(" $" + dblPrice);
   }
 
-  // returing the price of the item
+  /**
+  * A method that returns the price of the food item
+  *
+  * @return dblPrice, the price of the food item
+  */
   public double getPrice() {
     return this.dblPrice;
   }

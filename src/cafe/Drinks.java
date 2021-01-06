@@ -1,6 +1,11 @@
 package cafe;
 import cafe.*;
 
+/**
+* A program that extends the orderitem class. This program is for defining drinks, brewing them, 
+* determining their price, and outputing their summary.
+* @author: Kevin Basta
+*/
 public class Drinks extends OrderItem{
 
   // Instance variables
@@ -9,6 +14,16 @@ public class Drinks extends OrderItem{
   private char charSize;
   private boolean blnHotDrink;
 
+  /**
+  * Constructor method for the Drinks class
+  *
+  * @param newName  The name of the order item
+  * @param newNeutritions  The constructor for the Nutritions class
+  * @param newTypeOfDrink  The spesific type of drink being ordered
+  * @param newSize  The size of the drink picked using L, M, or S
+  * @param newHotDrink  A boolean that determines whether the drink is warm or not
+  * @return description of the return value
+  */
   public Drinks(String newName, Nutritions newNeutritions, String newTypeOfDrink, char newSize, boolean newHotDrink) {
     super(newName, newNeutritions);
     this.charSize = newSize;
@@ -34,7 +49,9 @@ public class Drinks extends OrderItem{
     }
   }
 
-  // Drink brewing simulation
+  /**
+  * A method that simulates the brewing and preparing of the drink through prints
+  */
   public void brewDrink() {
     System.out.println("");
     if (blnHotDrink) {
@@ -44,14 +61,20 @@ public class Drinks extends OrderItem{
     }
   }
 
-  // Outputing summary of the item
+  /**
+  * A method that outputs the summary of item using prints
+  */
   public void getSummary() {
     System.out.print(charSize + " " + super.getName() + ".");
 
     System.out.println(" $" + dblPrice);
   }
 
-  // returing the price of the item
+  /**
+  * A method that returns the price of the drink item
+  *
+  * @return dblPrice, the price of the drink item
+  */
   public double getPrice() {
     return this.dblPrice;
   }

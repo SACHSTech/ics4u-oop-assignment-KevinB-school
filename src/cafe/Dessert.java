@@ -1,6 +1,11 @@
 package cafe;
 import cafe.*;
 
+/**
+* A program that extends the orderitem class. This program is for defining desserts, preparing/
+* boxing them, determining their price, and outputing their summary.
+* @author: Kevin Basta
+*/
 public class Dessert extends OrderItem{
 
   // Instance variables
@@ -8,6 +13,14 @@ public class Dessert extends OrderItem{
   private String[] strToppings;
   private double dblPrice;
 
+  /**
+  * Constructor method for the Dessert class
+  *
+  * @param newName  The name of the order item
+  * @param newNeutritions  The constructor for the Nutritions class
+  * @param newTypeOfDessert  The spesific type of dessert being ordered
+  * @param newToppings  An array of toppings for the dessert
+  */
   public Dessert(String newName, Nutritions newNeutritions, String newTypeOfDessert, String[] newToppings) {
     super(newName, newNeutritions);
     this.strToppings = newToppings;
@@ -23,7 +36,9 @@ public class Dessert extends OrderItem{
     }
   }
 
-  // Boxing dessert simulation
+  /**
+  * A method that simulates the baking and packaging of the dessert through prints
+  */
   public void boxDessert() {
     System.out.println("");
     if (strTypeOfDessert.equals("ice cream")) {
@@ -36,7 +51,9 @@ public class Dessert extends OrderItem{
     System.out.println(strTypeOfDessert + " is ready!");
   }
 
-  // Outputing summary of the item
+  /**
+  * A method that outputs the summary of item using prints
+  */
   public void getSummary() {
     System.out.print(super.getName() + " with: ");
     for(int i = 0; i < strToppings.length; i++) {
@@ -49,7 +66,11 @@ public class Dessert extends OrderItem{
     System.out.println(" $" + dblPrice);
   }
 
-  // returing the price of the item
+  /**
+  * A method that returns the price of the dessert item
+  *
+  * @return dblPrice, the price of the dessert item
+  */
   public double getPrice() {
     return this.dblPrice;
   }
