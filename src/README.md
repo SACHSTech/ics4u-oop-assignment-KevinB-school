@@ -5,4 +5,4 @@
 * The system allows the workers to output the summary of the costomer's orders as well as the total and subtotal
 * At the end of the day, the workers are able to pull the total earnings for the day/session through the static variable in the Order class.
 
-![alt text](src/OOPDrawioKB.png "Drawio System Design")
+![alt text](https://github.com/SACHSTech/ics4u-oop-assignment-KevinB-school/blob/main/src/OOPDrawioKB.png "Drawio System Design")
