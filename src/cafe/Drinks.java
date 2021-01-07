@@ -6,7 +6,7 @@ import cafe.*;
 * determining their price, and outputing their summary.
 * @author: Kevin Basta
 */
-public class Drinks extends OrderItem{
+public class Drinks extends OrderItem {
 
   // Instance variables
   private String strTypeOfDrink;

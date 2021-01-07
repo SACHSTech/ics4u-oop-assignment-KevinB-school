@@ -8,7 +8,7 @@ import java.io.*;
 * @author: Kevin Basta
 */
 public class Main {
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException {
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
     // Friday febuary, 1st, 2021 Cash Register
@@ -71,7 +71,7 @@ public class Main {
     // order #3
     Order Matthew = new Order(true);
 
-    // adding Matthew's custom Sandwich and cooking it, then adding 
+    // adding Matthew's custom Sandwich and cooking it
     System.out.println("What type of custom sandwich would you like? (chicken, ham, eggs)");
     String strSandwichName = keyboard.readLine() + " sandwich";
     System.out.println("What 2 toppings/sauses would you like on your sandwich? (ketchup, mayo, mustard, radish, pickles, tomatoes, lettuce)");
